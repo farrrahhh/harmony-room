@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
   --background: #ffffff;
@@ -18,4 +20,76 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Global styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Define Typography styles */
+.h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sb1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sb2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.b1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.b2 {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+/* Colors */
+.text-primary {
+  color: #df2389;
+}
+
+.text-secondary {
+  color: #5c027f;
+}
+
+.text-accent1 {
+  color: #04065d;
+}
+
+.text-accent2 {
+  color: #ef0b20;
+}
+
+.text-dark1 {
+  color: #0c0d10;
+}
+
+.text-dark2 {
+  color: #333333;
+}
+
+.text-white {
+  color: #ffffff;
 }
