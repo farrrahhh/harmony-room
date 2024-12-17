@@ -14,8 +14,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Setelah submit berhasil, redirect ke halaman home
-    router.push("/home"); // Ganti '/home' dengan path halaman beranda Anda
+    router.push("/home"); 
   };
 
   return (
@@ -45,10 +44,10 @@ const LoginPage = () => {
                 Username
               </label>
               <input
-                type="text"  // Ganti type menjadi "text"
-                name="username"  // Gunakan nama field "username"
+                type="text"  
+                name="username"  
                 id="username"
-                value={formData.username}  // Gunakan formData.username
+                value={formData.username}  
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-black"
