@@ -13,14 +13,14 @@ const NavbarLogin = () => {
         
         <div className="flex items-center space-x-6">
           <Link
-            href="/login"
+            href="/"
             className="b1 text-white hover:text-primary"
           >
             Login
           </Link>
           <div className="bg-primary text-white px-4 py-2 rounded-md">
             <Link
-              href="/signup"
+              href="/register"
               className="b1 hover:text-white"
             >
               Signup
