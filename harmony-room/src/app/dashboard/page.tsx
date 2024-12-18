@@ -4,7 +4,7 @@ import SearchBar from '@/components/SearchBar';
 
 const DashboardPage = () => {
     return (
-        <div className="relative w-full min-h-screen flex flex-col">
+        <div className="relative p-8 w-full min-h-screen flex flex-col">
             {/* Background Container */}
             <div className="relative w-full min-h-screen overflow-hidden">
                 {/* Background Image */}
@@ -43,6 +43,28 @@ const DashboardPage = () => {
             </h1>
             <h2 className='h2 text-center text-[#706C6C] mt-0'>Check Out Some Of The Best Studio That We Got</h2>
             <h2 className='h2 text-center text-[#706C6C] mt-0'>For Your Band</h2>
+            <div className="flex items-center justify-center">
+                <div className="p-4 bg-primary rounded-lg w-4/8 flex items-center justify-center mt-8 gap-20">
+                    <div className='flex-col justify-center items-center text-center'>
+                        <h1 className='h1'>100K+</h1>
+                        <h3 className='h3'>Customers</h3>
+                    </div>
+                    <div className='flex-col justify-center items-center text-center'>
+                        <h1 className='h1'>500+</h1>
+                        <h3 className='h3'>Studios</h3>
+                    </div>
+                    <div className='flex-col justify-center items-center text-center'>
+                        <h1 className='h1'>40+</h1>
+                        <h3 className='h3'>Instruments</h3>
+                    </div>
+                    <div className='flex-col justify-center items-center text-center'>
+                        <h1 className='h1'>150</h1>
+                        <h3 className='h3'>Dolby Atmos</h3>
+                    </div>
+                    
+                </div>
+            </div>
+
         </div>
     );
 };
