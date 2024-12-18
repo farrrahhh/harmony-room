@@ -67,14 +67,10 @@ const SearchBar: React.FC<SearchBarProps> = ({ linkNavigate }) => {
       </div>
 
       {/* Search Button */}
-      <button
-        onClick={handleSearch}
-        className=" h-12 bg-primary p-3 shadow-lg hover:bg-primary-dark transition w-auto flex items-center justify-center rounded-r-lg"
-        
-      >
-        <FaSearch className="mr-1 h-6 w-6" />
-       
-      </button>
+      <div className=" h-11 bg-primary p-4 w-auto flex items-center justify-center rounded-r-lg" onClick={handleSearch}>
+        <FaSearch className="mr-1 h-5 w-5" />
+      </div>
+      
     </div>
   );
 };
