@@ -3,6 +3,7 @@ import CollapsePhotos from "../../components/CollapsePhotos";
 import IconDesc from "@/components/IconDesc";
 import TypeOfStudio from "@/components/TypeOfStudio";
 import Review from "@/components/Review";
+import SearchBar from "@/components/SearchBar";
 const DetailStudioPage = () => {
   const photos = [
     "/1.png",
@@ -14,7 +15,10 @@ const DetailStudioPage = () => {
 
   return (
     <div className="bg-1A1A1A min-h-screen text-black">
-      <div className="container mx-auto p-4 mt-8">
+        <div className="p-4 text-white mt-8 ml-10 mr-10">
+            <SearchBar linkNavigate={""} />
+        </div>
+      <div className="container mx-auto pl-4 pr-4 pb-4">
         <CollapsePhotos photos={photos} />
       </div>
       <div className="container mx-auto p-4 bg-white rounded-lg shadow-md">
