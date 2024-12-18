@@ -14,7 +14,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push("/detailstudio"); 
+    router.push("/dashboard"); 
   };
 
   return (

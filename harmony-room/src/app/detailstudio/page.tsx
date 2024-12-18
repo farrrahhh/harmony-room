@@ -17,7 +17,7 @@ const DetailStudioPage = () => {
   return (
     <div className="bg-1A1A1A min-h-screen text-black">
         <div className="p-4 text-white mt-8 ml-10 mr-10">
-            <SearchBar linkNavigate={""} />
+            <SearchBar linkNavigate={""} height={45} />
         </div>
       <div className="container mx-auto pl-4 pr-4 pb-4">
         <CollapsePhotos photos={photos} />
