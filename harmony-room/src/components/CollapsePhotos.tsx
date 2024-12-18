@@ -1,10 +1,9 @@
 "use client";
 
-
-import React from 'react';
+import React from "react";
 
 interface CollapsePhotosProps {
-  photos: string[]; 
+  photos: string[];
 }
 
 const CollapsePhotos: React.FC<CollapsePhotosProps> = ({ photos }) => {
@@ -13,46 +12,38 @@ const CollapsePhotos: React.FC<CollapsePhotosProps> = ({ photos }) => {
   }
 
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex gap-4">
       {/* Left Image (Larger) */}
-      <div className="w-full sm:w-1/2">
+      <div className="w-1/2">
         <img
           src={photos[0]}
           alt="Main Studio"
-          className="w-full h-auto object-cover rounded-lg"
+          className="w-full h-full object-cover rounded-lg"
         />
       </div>
 
       {/* Right Images (2x2 grid) */}
-      <div className="w-full sm:w-1/2 grid grid-cols-2 gap-4">
-        <div className="w-full">
-          <img
-            src={photos[1]}
-            alt="Studio Image 2"
-            className="w-full h-auto object-cover rounded-lg"
-          />
-        </div>
-        <div className="w-full">
-          <img
-            src={photos[2]}
-            alt="Studio Image 3"
-            className="w-full h-auto object-cover rounded-lg"
-          />
-        </div>
-        <div className="w-full">
-          <img
-            src={photos[3]}
-            alt="Studio Image 4"
-            className="w-full h-auto object-cover rounded-lg"
-          />
-        </div>
-        <div className="w-full">
-          <img
-            src={photos[4]}
-            alt="Studio Image 5"
-            className="w-full h-auto object-cover rounded-lg"
-          />
-        </div>
+      <div className="w-1/2 grid grid-cols-2 gap-4">
+        <img
+          src={photos[1]}
+          alt="Studio Image 2"
+          className="w-full h-60 object-cover rounded-lg"
+        />
+        <img
+          src={photos[2]}
+          alt="Studio Image 3"
+          className="w-full h-60 object-cover rounded-lg"
+        />
+        <img
+          src={photos[3]}
+          alt="Studio Image 4"
+          className="w-full h-60 object-cover rounded-lg"
+        />
+        <img
+          src={photos[4]}
+          alt="Studio Image 5"
+          className="w-full h-60 object-cover rounded-lg"
+        />
       </div>
     </div>
   );

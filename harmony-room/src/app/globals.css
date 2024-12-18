@@ -1,9 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* globals.css */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,9 +21,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Global styles */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -33,36 +29,43 @@ body {
 .h1 {
   font-size: 4rem;
   font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 
 .h2 {
   font-size: 3rem;
   font-weight: 700;
+  font-family: "Poppins", sans-serif;
 }
 
 .h3 {
   font-size: 2rem;
   font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
 
 .sb1 {
   font-size: 1.5rem;
   font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
 
 .sb2 {
   font-size: 1rem;
   font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
 
 .b1 {
   font-size: 1rem;
   font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 
 .b2 {
   font-size: 0.875rem;
   font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Colors */
@@ -92,4 +95,14 @@ body {
 
 .text-white {
   color: #ffffff;
+}
+
+.boxStyle {
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid #b5b5b5;
+}
+
+.style2 {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
