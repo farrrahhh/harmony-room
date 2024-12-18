@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation"; // Import useRouter untuk navigasi
+import { useRouter } from "next/navigation"; 
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ username: "", password: "" }); // Perbarui nama field menjadi username
