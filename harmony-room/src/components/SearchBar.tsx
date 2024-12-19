@@ -1,21 +1,35 @@
 "use client";
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import router from "next/router";
 
+import Link from "next/link";
 interface SearchBarProps {
   linkNavigate: string;
   height: number;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ linkNavigate, height }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ height }) => {
   const [studioName, setStudioName] = useState("");
   const [date, setDate] = useState("");
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
 
-  const handleSearch = () => {
-    router.push(linkNavigate);
+  // Function to generate hour options
+  const generateHourOptions = (startHour: number = 0) => {
+    const hours = [];
+    for (let i = startHour; i < 24; i++) {
+      hours.push(`${i.toString().padStart(2, "0")}:00`);
+    }
+    return hours;
+  };
+
+  // Function to get today's date in YYYY-MM-DD format
+  const getTodayDate = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = (today.getMonth() + 1).toString().padStart(2, "0");
+    const day = today.getDate().toString().padStart(2, "0");
+    return `${year}-${month}-${day}`;
   };
 
   return (
@@ -40,6 +54,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ linkNavigate, height }) => {
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
+          min={getTodayDate()} // Set minimum date to today
           className="block w-full p-2 border border-primary text-black focus:outline-none focus:ring-2 focus:ring-primary"
           style={{ height: "100%" }}
         />
@@ -47,37 +62,67 @@ const SearchBar: React.FC<SearchBarProps> = ({ linkNavigate, height }) => {
 
       {/* Start Time Input */}
       <div className="w-1/8" style={{ height }}>
-        <input
+        <select
           id="startTime"
-          type="time"
           value={startTime}
           onChange={(e) => setStartTime(e.target.value)}
           className="block w-full p-2 border border-primary text-black focus:outline-none focus:ring-2 focus:ring-primary"
           style={{ height: "100%" }}
-        />
+        >
+          {generateHourOptions().map((hour) => (
+            <option key={hour} value={hour}>
+              {hour}
+            </option>
+          ))}
+        </select>
+        <style jsx>{`
+          select {
+            position: relative;
+          }
+          select option {
+            max-height: 200px;
+            overflow-y: auto;
+          }
+        `}</style>
       </div>
 
       {/* End Time Input */}
       <div className="w-1/8" style={{ height }}>
-        <input
+        <select
           id="endTime"
-          type="time"
           value={endTime}
           onChange={(e) => setEndTime(e.target.value)}
           className="block w-full p-2 border border-primary text-black focus:outline-none focus:ring-2 focus:ring-primary"
           style={{ height: "100%" }}
-        />
+        >
+          {generateHourOptions(Number(startTime.split(":")[0]) + 1).map(
+            (hour) => (
+              <option key={hour} value={hour}>
+                {hour}
+              </option>
+            )
+          )}
+        </select>
+        <style jsx>{`
+          select {
+            position: relative;
+          }
+          select option {
+            max-height: 200px;
+            overflow-y: auto;
+          }
+        `}</style>
       </div>
 
       {/* Search Button */}
-      <div
-        className="bg-primary p-4 w-auto flex items-center justify-center rounded-r-lg cursor-pointer" 
-        onClick={handleSearch}
-        style={{ height: height - 1 }}
-
-      >
-        <FaSearch className="mr-1 h-5 w-5" />
-      </div>
+      <Link href="hasilsearch">
+        <div
+          className="bg-primary p-4 w-auto flex items-center justify-center rounded-r-lg cursor-pointer"
+          style={{ height: height - 1 }}
+        >
+          <FaSearch className="mr-1 h-5 w-5" />
+        </div>
+      </Link>
     </div>
   );
 };

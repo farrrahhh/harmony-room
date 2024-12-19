@@ -1,6 +1,17 @@
-import React from 'react';
+"use client";
+import React, { useState } from "react";
+import "rc-slider/assets/index.css";
+import Slider from "rc-slider";
 
 const FilterComponent = () => {
+  const [priceRange, setPriceRange] = useState([20000, 1000000]);
+
+  const handlePriceChange = (newRange: number | number[]) => {
+    if (Array.isArray(newRange)) {
+      setPriceRange(newRange);
+    }
+  };
+
   return (
     <div className="w-full bg-white p-4 rounded-lg border border-gray-200 ">
       <h1 className="sb1 mb-4">Filter</h1>
@@ -11,53 +22,48 @@ const FilterComponent = () => {
           <div className="flex flex-col gap-2 b1">
             <div className="flex items-center">
               <input type="checkbox" id="kategori1" />
-              <label htmlFor="kategori1" className="ml-2">Music</label>
+              <label htmlFor="kategori1" className="ml-2">
+                Music
+              </label>
             </div>
             <div className="flex items-center">
               <input type="checkbox" id="kategori2" />
-              <label htmlFor="kategori2" className="ml-2">Recording</label>
+              <label htmlFor="kategori2" className="ml-2">
+                Recording
+              </label>
             </div>
             <div className="flex items-center">
               <input type="checkbox" id="kategori3" />
-              <label htmlFor="kategori3" className="ml-2">Band Practice</label>
+              <label htmlFor="kategori3" className="ml-2">
+                Band Practice
+              </label>
             </div>
           </div>
         </div>
 
         {/* Price Range Filter */}
         <div>
-            <h2 className="sb2">Price Range</h2>
-            <div className="flex gap-4 mt-2">
-                {/* Min Price Input */}
-                <input
-                type="number"
-                min="0"
-                step="50"
-                placeholder="Min"
-                className="w-full p-2 border border-primary rounded-lg focus:outline-none"
-                style={{
-                    appearance: "none",  
-                    MozAppearance: "textfield",  
-                    WebkitAppearance: "none", 
-                }}
-                />
-                {/* Max Price Input */}
-                <input
-                type="number"
-                min="0"
-                max="10000"
-                step="50"
-                placeholder="Max"
-                className="w-full p-2 border border-primary rounded-lg focus:outline-none"
-                style={{
-                    appearance: "none", 
-                    MozAppearance: "textfield",  
-                    WebkitAppearance: "none", 
-                }}
-                />
+          <h2 className="sb2">Price Range</h2>
+          <div className="flex flex-col gap-2 mt-2">
+            <div className="flex justify-between">
+              <p>Rp20.000</p>
+              <p>Rp1.000.000</p>
             </div>
+            <Slider
+              range
+              min={20000}
+              max={1000000}
+              step={5000}
+              value={priceRange}
+              onChange={handlePriceChange}
+              className="w-full"
+            />
+            <div className="flex justify-between ">
+              <span>Min: Rp{priceRange[0].toLocaleString()}</span>
+              <span>Max: Rp{priceRange[1].toLocaleString()}</span>
+            </div>
+          </div>
         </div>
-
 
         {/* Facilities Filter */}
         <div>
@@ -65,26 +71,29 @@ const FilterComponent = () => {
           <div className="flex flex-col gap-2 b1">
             <div className="flex items-center">
               <input type="checkbox" id="fasilitas1" />
-              <label htmlFor="fasilitas1" className="ml-2">Parking</label>
+              <label htmlFor="fasilitas1" className="ml-2">
+                Parking
+              </label>
             </div>
             <div className="flex items-center">
               <input type="checkbox" id="fasilitas2" />
-              <label htmlFor="fasilitas2" className="ml-2">Wifi</label>
+              <label htmlFor="fasilitas2" className="ml-2">
+                Wifi
+              </label>
             </div>
             <div className="flex items-center">
               <input type="checkbox" id="fasilitas3" />
-              <label htmlFor="fasilitas3" className="ml-2">AC</label>
+              <label htmlFor="fasilitas3" className="ml-2">
+                AC
+              </label>
             </div>
           </div>
         </div>
 
-       {/* Apply Filters Button */}
-        <button
-        className="bg-primary text-white p-2 rounded-lg mt-4 w-full hover:bg-primary-dark hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-        >
-        Apply Filters
+        {/* Apply Filters Button */}
+        <button className="bg-primary text-white p-2 rounded-lg mt-4 w-full hover:bg-primary-dark hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+          Apply Filters
         </button>
-
       </div>
     </div>
   );
