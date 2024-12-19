@@ -19,7 +19,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ linkNavigate, height }) => {
   };
 
   return (
-    <div className="flex flex-row items-center p-4 shadow-lg">
+    <div className="flex flex-row items-center p-4 ">
       {/* Studio Name Input */}
       <div className="b1 w-3/5" style={{ height }}>
         <input
@@ -28,7 +28,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ linkNavigate, height }) => {
           value={studioName}
           onChange={(e) => setStudioName(e.target.value)}
           placeholder="Enter studio name"
-          className="b1 block w-full p-2 border border-primary text-black focus:outline-none focus:ring-2 focus:ring-primary rounded-l-lg"
+          className="b1 w-full p-2 border border-primary text-black focus:outline-none focus:ring-2 focus:ring-primary rounded-l-lg"
           style={{ height: "100%" }}
         />
       </div>
