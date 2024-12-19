@@ -9,8 +9,8 @@ const HasilSearch = () => {
     <div className="bg-white min-h-screen text-dark2">
 
       {/* Search Bar */}
-      <div className="p-4 text-black mt-12 mx-10">
-        <SearchBar linkNavigate={""} height={45} />
+      <div className="p-4 mt-12 mx-10">
+        <SearchBar linkNavigate={"#"} height={45} />
       </div>
 
       <div className="flex gap-8 px-10 mt-10">

@@ -7,7 +7,7 @@ import Carousel from '@/components/Carousel';
 
 const DashboardPage = () => {
     return (
-        <div className="relative p-8 w-full min-h-screen flex flex-col">
+        <div className="relative w-full min-h-screen flex flex-col">
             {/* Background Container */}
             <div className="relative w-full min-h-screen overflow-hidden">
                 {/* Background Image */}
@@ -76,7 +76,7 @@ const DashboardPage = () => {
             </h1>
             
 
-            <div className="grid grid-rows-2 grid-cols-3 gap-4 mt-8">
+            <div className="grid grid-rows-2 grid-cols-3 gap-4 mt-8 p-8">
                 <Card2 title="Harmoni Kreatif" image="/studio5.png" address="Jl. Merdeka Utama No. 12, Blok 3C, Bandung Barat"/>
                 <Card2 title="Melodi Indah" image="/studio6.png" address="Jl. Suka Mulya No. 45, Blok 2B, Bandung Timur"/>
                 <Card2 title="Suara Emas" image="/studio9.png" address="Jl. Suka Mulya No. 45, Blok 2B, Bandung Timur"/>
