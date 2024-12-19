@@ -73,8 +73,6 @@ body {
   color: #df2389;
 }
 
-
-
 .text-secondary {
   color: #5c027f;
 }
@@ -112,3 +110,26 @@ body {
 .style2 {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+.text-primarygradient {
+  background: linear-gradient(189deg, #df2389 10.46%, #79134a 118.71%);
+  background-clip: padding-box;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.boxStyle2 {
+  border-radius: 20px;
+  border: 1px solid var(--Dark-2, #1a1a1a);
+  background: radial-gradient(83.27% 83.26% at 50.06% 54.87%, rgba(255, 254, 254, 0.14) 0%, rgba(204, 203, 203, 0.14) 50.64%, rgba(153, 152, 152, 0.14) 100%);
+  backdrop-filter: blur(40px);
+}
+
+.styleImage {
+  object-fit: cover; /* Ensures image covers the entire container */
+  width: 100%;
+  height: 100%;
+}
+
+
+
