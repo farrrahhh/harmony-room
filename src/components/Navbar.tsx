@@ -10,7 +10,7 @@ import UserIcon from "@Images/navbar-icons/user-icon.png";
 
 const NavbarLogin = () => {
   const router = usePathname();
-  if (router === "/") {
+  if (router === "/" || router === "/register") {
     return (
       <nav className="bg-dark1 shadow-md fixed top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center p-2">
