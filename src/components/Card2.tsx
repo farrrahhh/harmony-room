@@ -9,10 +9,12 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, image, address }) => {
   return (
     <div>
-      <p className="sb1 text-center text-primary">
-        {title} <span className="text-white">Studio</span>
-      </p>
-      <div>
+      <div className="d-flex text-center justify-content-center align-items-center">
+        <p className="sb1 text-primary">
+          {title} <span className="text-white">Studio</span>
+        </p>
+      </div>
+      <div className="flex justify-center items-center">
         <Image
           src={image}
           alt="Studio Card"
