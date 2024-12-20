@@ -27,16 +27,16 @@ const HasilSearch = () => {
             instrument="Vocal"
           />
           <Card4
-            title="Alice Johnson"
-            image="/21.png"
-            agepartner={25}
+            title="Irfan Musthofa"
+            image="/irfan.png"
+            agepartner={20}
             genre="Rock"
             instrument="Guitar"
           />
           <Card4
-            title="Bob Smith"
-            image="/22.png"
-            agepartner={30}
+            title="Mattheuw Suciadi"
+            image="/mattheuw.png"
+            agepartner={20}
             genre="Jazz"
             instrument="Piano"
           />
