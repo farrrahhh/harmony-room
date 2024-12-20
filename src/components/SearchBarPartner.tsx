@@ -7,7 +7,7 @@ const SearchBarPartner = () => {
 
   const handleSearch = () => {
     if (searchName.trim() !== "") {
-      console.log("Searching for:", searchName); // Ganti dengan logika pencarian
+      console.log("Searching for:", searchName); 
     }
   };
 
