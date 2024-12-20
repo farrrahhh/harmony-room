@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 const UserProfile: React.FC = () => {
   const router = useRouter();
   const handleClick = () => {
@@ -34,22 +35,37 @@ const UserProfile: React.FC = () => {
         {/* Middle Section */}
         <div style={{ textAlign: "left", flex: 2, borderLeft: "1px solid #ddd", paddingLeft: "20px", marginRight: "20px" }}>
           <p className="sb2">About me</p>
-          <p className="b1">Seorang pecinta musik yang selalu terinspirasi oleh melodi dan harmoni. Mulai dari bermain alat musik hingga menjelajahi berbagai genre, musik adalah bahasa universal yang selalu menemani perjalanan hidupku.</p>
+          <p className="b1">Seorang pecinta musik yang selalu terinspirasi oleh melodi dan harmoni. Mulai dari bermain alat musik hingga menjelajahi berbagai genre, musik adalah bahasa universal yang selalu menemani perjalanan hidupku</p>
         </div>
 
         {/* Right Section */}
-        <div style={{ flex: 1, textAlign: "center" }}>
-          <img
+        <div className="flex-col text-center">
+          <Image
             src="/image.png"
             alt="Profile"
-            style={{
-              borderRadius: "10px",
-              width: "100%",
-              maxWidth: "150px",
-              height: "150px",
-              objectFit: "cover"
-            }}
+            width={200}
+            height={200}
+            objectFit="cover"
+
+
+          
           />
+          <div className="flex gap-6 mt-4 justify-center">
+            <Image
+              src={"/social1.png"}
+              width={30}
+              height={30} alt={""}            />
+            <Image
+              src={"/social2.png"}
+              width={30}
+              height={30} alt={""}            
+            />
+          <Image
+              src={"/social3.png"}
+              width={30}
+              height={30} alt={""}  
+            />
+          </div>
         </div>
       </div>
     </div>
