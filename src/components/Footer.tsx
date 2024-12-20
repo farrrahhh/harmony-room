@@ -7,7 +7,11 @@ import { usePathname } from "next/navigation";
 const Footer = () => {
   const router = usePathname();
 
-  if (router != "/chatpage" && router != "/register" && router != "/") {
+  if (
+    router != "/chatpage" &&
+    router != "/register" &&
+    router != "/"
+  ) {
     return (
       <footer className="dark3 text-white p-8 flex flex-col md:flex-row gap-8 border-t border-grey">
         {/* About Section */}

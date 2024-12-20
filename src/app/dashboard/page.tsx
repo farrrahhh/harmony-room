@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const DashboardPage = () => {
   return (
-    <div className="relative w-full min-h-screen flex flex-col">
+    <div className="relative w-full min-h-screen mb-16 flex flex-col">
       {/* Background Container */}
       <div className="relative w-full min-h-screen overflow-hidden">
         {/* Background Image */}
@@ -48,7 +48,7 @@ const DashboardPage = () => {
       </h2>
       <h2 className="h2 text-center text-[#706C6C] mt-0">For Your Band</h2>
       <div className="flex items-center justify-center">
-        <div className="p-4 bg-primarygradient text-primarygradient rounded-lg w-4/8 flex items-center justify-center mt-8 gap-20">
+        <div className="p-4 bg-primarygradient text-primarygradient rounded-lg w-[70%] flex items-center justify-center mt-8 gap-20">
           <div className="flex-col justify-center items-center text-center">
             <h1 className="h1">100K+</h1>
             <h3 className="h3">Customers</h3>
@@ -79,7 +79,7 @@ const DashboardPage = () => {
 
       <div className="grid grid-rows-2 grid-cols-3 gap-4 mt-8 p-8">
         <Link
-          href="bookingdetails"
+          href="detailstudio"
           className="transform transition-transform hover:scale-110"
         >
           <Card2
@@ -89,7 +89,7 @@ const DashboardPage = () => {
           />
         </Link>
         <Link
-          href="bookingdetails"
+          href="detailstudio"
           className="transform transition-transform hover:scale-110"
         >
           <Card2
@@ -99,7 +99,7 @@ const DashboardPage = () => {
           />
         </Link>
         <Link
-          href="bookingdetails"
+          href="detailstudio"
           className="transform transition-transform hover:scale-110"
         >
           <Card2
@@ -109,7 +109,7 @@ const DashboardPage = () => {
           />
         </Link>
         <Link
-          href="bookingdetails"
+          href="detailstudio"
           className="transform transition-transform hover:scale-110"
         >
           <Card2
@@ -119,7 +119,7 @@ const DashboardPage = () => {
           />
         </Link>
         <Link
-          href="bookingdetails"
+          href="detailstudio"
           className="transform transition-transform hover:scale-110"
         >
           <Card2
@@ -129,7 +129,7 @@ const DashboardPage = () => {
           />
         </Link>
         <Link
-          href="bookingdetails"
+          href="detailstudio"
           className="transform transition-transform hover:scale-110"
         >
           <Card2
