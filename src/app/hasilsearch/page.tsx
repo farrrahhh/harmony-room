@@ -1,12 +1,11 @@
 import React from "react";
 import Card from "@/components/Card";
-import Footer from "@/components/Footer";
 import SearchBar from "@/components/SearchBar";
 import Filter from "@/components/Filter";
 
 const HasilSearch = () => {
   return (
-    <div className="bg-white min-h-screen text-dark2">
+    <div className="bg-white min-h-screen text-dark2 pb-16">
       {/* Search Bar */}
       <div className="p-4 mt-12 mx-10">
         <SearchBar linkNavigate={"#"} height={45} />
@@ -111,11 +110,6 @@ const HasilSearch = () => {
             rating={3}
           />
         </div>
-      </div>
-
-      {/* Footer */}
-      <div className="mt-20">
-        <Footer />
       </div>
     </div>
   );

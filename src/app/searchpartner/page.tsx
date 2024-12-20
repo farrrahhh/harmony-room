@@ -1,12 +1,11 @@
 import React from "react";
 import Card4 from "@/components/Card4"; // Pastikan jalur impor sudah benar
-import Footer from "@/components/Footer";
 import SearchBarPartner from "@/components/SearchBarPartner";
 import FilterBandMate from "@/components/FilterBandMate";
 
 const HasilSearch = () => {
   return (
-    <div className="bg-white min-h-screen text-dark2">
+    <div className="bg-white text-dark2 pb-16">
       {/* Search Bar */}
       <div className="p-4 mt-12 mx-10 w-200">
         <SearchBarPartner />
@@ -91,11 +90,6 @@ const HasilSearch = () => {
             instrument="Harmonica"
           />
         </div>
-      </div>
-
-      {/* Footer */}
-      <div className="mt-20 w-full">
-        <Footer />
       </div>
     </div>
   );

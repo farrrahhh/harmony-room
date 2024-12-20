@@ -66,7 +66,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ height }) => {
           id="startTime"
           value={startTime}
           onChange={(e) => setStartTime(e.target.value)}
-          className="block w-full p-2 border border-primary text-black focus:outline-none focus:ring-2 focus:ring-primary"
+          className="block w-100% p-2 border border-primary text-black focus:outline-none focus:ring-2 focus:ring-primary"
           style={{ height: "100%" }}
         >
           {generateHourOptions().map((hour) => (

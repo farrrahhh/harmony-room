@@ -86,15 +86,24 @@ const FilterComponent = () => {
               <p>18</p>
               <p>60</p>
             </div>
-            <Slider
-              range
-              min={18}
-              max={60}
-              step={1}
-              value={ageRange}
-              onChange={handleAgeChange}
-              className="w-full"
-            />
+            <div className="px-4">
+              <Slider
+                range
+                min={18}
+                max={60}
+                step={1}
+                value={ageRange}
+                onChange={handleAgeChange}
+                className="w-full"
+                handleStyle={{
+                  borderColor: "darkgray",
+                  height: 20,
+                  width: 20,
+                  backgroundColor: "#DF2389",
+                }}
+                trackStyle={{ backgroundColor: "#5C027F", height: 10 }}
+              />
+            </div>
             <div className="flex justify-between">
               <span>Min: {ageRange[0]} years</span>
               <span>Max: {ageRange[1]} years</span>

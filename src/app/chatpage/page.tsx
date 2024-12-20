@@ -3,7 +3,9 @@ import React, { useState } from "react";
 
 const ChatPage = () => {
   const [selectedChat, setSelectedChat] = useState<string | null>(null);
-  const [messages, setMessages] = useState<{ sender: string; message: string }[]>([]);
+  const [messages, setMessages] = useState<
+    { sender: string; message: string }[]
+  >([]);
   const [inputMessage, setInputMessage] = useState<string>("");
 
   const handleSendMessage = () => {
@@ -22,7 +24,7 @@ const ChatPage = () => {
   };
 
   return (
-    <div className="flex h-screen text-dark2">
+    <div className="flex h-screen bg-white text-dark2">
       {/* Sidebar Chat List */}
       <div className="w-1/3 border-r border-gray-300 bg-white">
         <div className="mt-12"></div>
@@ -34,7 +36,9 @@ const ChatPage = () => {
                 key={chat}
                 onClick={() => handleSelectChat(chat)}
                 className={`p-3 cursor-pointer rounded-lg ${
-                  selectedChat === chat ? "bg-primary text-white" : "hover:bg-gray-200"
+                  selectedChat === chat
+                    ? "bg-primary text-white"
+                    : "hover:bg-gray-200"
                 } flex items-center`}
               >
                 <img
@@ -62,9 +66,18 @@ const ChatPage = () => {
             {/* Messages */}
             <div className="flex-grow p-4 overflow-y-auto bg-gray-50">
               {messages.map((msg, index) => (
-                <div key={index} className={`mb-2 ${msg.sender === selectedChat ? "text-right" : ""}`}>
+                <div
+                  key={index}
+                  className={`mb-2 ${
+                    msg.sender === selectedChat ? "text-right" : ""
+                  }`}
+                >
                   <div
-                    className={`p-2 rounded-lg ${msg.sender === selectedChat ? "bg-primary text-white" : "bg-gray-300 text-black"} inline-block`}
+                    className={`p-2 rounded-lg ${
+                      msg.sender === selectedChat
+                        ? "bg-primary text-white"
+                        : "bg-gray-300 text-black"
+                    } inline-block`}
                     style={{ maxWidth: "80%" }}
                   >
                     {msg.message}
@@ -91,9 +104,9 @@ const ChatPage = () => {
             </div>
           </div>
         ) : (
-            <div className="flex items-center justify-center flex-grow bg-white">
-                <p className="sb2">Select a chat to start messaging</p>
-            </div>
+          <div className="flex items-center justify-center flex-grow bg-white">
+            <p className="sb2">Select a chat to start messaging</p>
+          </div>
         )}
       </div>
     </div>

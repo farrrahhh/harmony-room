@@ -47,17 +47,31 @@ const NavbarLogin = () => {
             </div>
           </Link>
           <div className="flex items-center space-x-6">
-            <Link href="/findmate">
-              <p>Find Your Mate!</p>
+            <Link href="/searchpartner">
+              <p className="hover:text-primary transition-transform transform hover:scale-110">
+                Find Your Mate!
+              </p>
             </Link>
-            <Link href="/chat">
-              <Image src={ChatIcon} alt="Chat" className="h-8 w-8" />
+            <Link href="/chatpage">
+              <Image
+                src={ChatIcon}
+                alt="Chat"
+                className="h-8 w-8 transition-transform transform hover:scale-110"
+              />
             </Link>
-            <Link href="/history">
-              <Image src={HistoryIcon} alt="History" className="h-8 w-8" />
+            <Link href="/bookinghistory">
+              <Image
+                src={HistoryIcon}
+                alt="History"
+                className="h-8 w-8 transition-transform transform hover:scale-110"
+              />
             </Link>
-            <Link href="/user">
-              <Image src={UserIcon} alt="User" className="h-8 w-8" />
+            <Link href="/profile">
+              <Image
+                src={UserIcon}
+                alt="User"
+                className="h-8 w-8 transition-transform transform hover:scale-110"
+              />
             </Link>
           </div>
         </div>

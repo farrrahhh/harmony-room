@@ -4,7 +4,6 @@ import IconDesc from "@/components/IconDesc";
 import TypeOfStudio from "@/components/TypeOfStudio";
 import Review from "@/components/Review";
 import SearchBar from "@/components/SearchBar";
-import Footer from "@/components/Footer";
 const DetailStudioPage = () => {
   const photos = [
     "/1.png",
@@ -128,7 +127,6 @@ const DetailStudioPage = () => {
             </div>
         </div>
       </div>
-    <Footer />
     </div>
   );
 };

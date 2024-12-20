@@ -31,7 +31,7 @@ const SearchBarPartner = () => {
         style={{ height: "50px" }}
         onClick={handleSearch}
       >
-        <FaSearch className="h-5 w-5" />
+        <FaSearch className="h-5 w-5 text-white" />
       </div>
     </div>
   );
