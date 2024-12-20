@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation"; 
+import Link from "next/link";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ username: "", password: "" }); // Perbarui nama field menjadi username
@@ -163,9 +164,9 @@ const LoginPage = () => {
           <p className="b1 mt-6 text-left text-bold text-dark1">
             Already have an account?{" "}
             {/* back to login */}
-            <a href="/" className="b1 text-primary hover:text-blue-500">
+            <Link href="/" className="b1 text-primary hover:text-blue-500">
               Login
-            </a>
+            </Link>
           </p>
         </div>
       </div>

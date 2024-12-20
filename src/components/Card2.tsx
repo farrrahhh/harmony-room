@@ -1,6 +1,6 @@
 
 "use client";
-import { FaStar, FaRegStar } from 'react-icons/fa';
+
 import { useRouter } from 'next/navigation';
 interface CardProps {
   title: string;
