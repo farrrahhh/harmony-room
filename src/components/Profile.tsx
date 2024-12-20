@@ -54,19 +54,16 @@ const UserProfile: React.FC = () => {
             <Image
               src={"/social1.png"}
               width={30}
-              height={30}
-            />
+              height={30} alt={""}            />
             <Image
               src={"/social2.png"}
               width={30}
-              height={30}
-            
+              height={30} alt={""}            
             />
           <Image
               src={"/social3.png"}
               width={30}
-              height={30}
-  
+              height={30} alt={""}  
             />
           </div>
         </div>
