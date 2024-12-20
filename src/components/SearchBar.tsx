@@ -118,9 +118,9 @@ const SearchBar: React.FC<SearchBarProps> = ({ height }) => {
       <Link href="hasilsearch">
         <div
           className="bg-primary p-4 w-auto flex items-center justify-center rounded-r-lg cursor-pointer"
-          style={{ height: height - 1 }}
+          style={{ height: height - 0.2 }}
         >
-          <FaSearch className="mr-1 h-5 w-5" />
+          <FaSearch className="mr-1 h-5 w-5 text-white" />
         </div>
       </Link>
     </div>

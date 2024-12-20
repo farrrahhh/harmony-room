@@ -40,6 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# vscode conf
+# vscode and ds store
 .vscode
 .DS_Store

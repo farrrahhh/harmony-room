@@ -49,15 +49,24 @@ const FilterComponent = () => {
               <p>Rp20.000</p>
               <p>Rp1.000.000</p>
             </div>
-            <Slider
-              range
-              min={20000}
-              max={1000000}
-              step={5000}
-              value={priceRange}
-              onChange={handlePriceChange}
-              className="w-full"
-            />
+            <div className="px-4">
+              <Slider
+                range
+                min={20000}
+                max={1000000}
+                step={10000}
+                value={priceRange}
+                onChange={handlePriceChange}
+                className="w-full"
+                handleStyle={{
+                  borderColor: "darkgray",
+                  height: 20,
+                  width: 20,
+                  backgroundColor: "#DF2389",
+                }}
+                trackStyle={{ backgroundColor: "#5C027F", height: 10 }}
+              />
+            </div>
             <div className="flex justify-between ">
               <span>Min: Rp{priceRange[0].toLocaleString()}</span>
               <span>Max: Rp{priceRange[1].toLocaleString()}</span>
