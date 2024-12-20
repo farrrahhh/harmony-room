@@ -7,6 +7,12 @@ import Logo from "@Images/logo.png";
 import ChatIcon from "@Images/navbar-icons/chat-icon.png";
 import HistoryIcon from "@Images/navbar-icons/history-icon.png";
 import UserIcon from "@Images/navbar-icons/user-icon.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const NavbarLogin = () => {
   const router = usePathname();
@@ -66,13 +72,20 @@ const NavbarLogin = () => {
                 className="h-8 w-8 transition-transform transform hover:scale-110"
               />
             </Link>
-            <Link href="/dashboard">
-              <Image
-                src={UserIcon}
-                alt="User"
-                className="h-8 w-8 transition-transform transform hover:scale-110"
-              />
-            </Link>
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger>
+                <Image
+                  src={UserIcon}
+                  alt="User"
+                  className="h-8 w-8 transition-transform transform hover:scale-110"
+                />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem asChild>
+                  <Link href="./">Sign Out</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </nav>
