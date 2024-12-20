@@ -34,7 +34,7 @@ const UserProfile: React.FC = () => {
         {/* Middle Section */}
         <div style={{ textAlign: "left", flex: 2, borderLeft: "1px solid #ddd", paddingLeft: "20px", marginRight: "20px" }}>
           <p className="sb2">About me</p>
-          <p className="b1">"Seorang pecinta musik yang selalu terinspirasi oleh melodi dan harmoni. Mulai dari bermain alat musik hingga menjelajahi berbagai genre, musik adalah bahasa universal yang selalu menemani perjalanan hidupku. 🎶"</p>
+          <p className="b1">Seorang pecinta musik yang selalu terinspirasi oleh melodi dan harmoni. Mulai dari bermain alat musik hingga menjelajahi berbagai genre, musik adalah bahasa universal yang selalu menemani perjalanan hidupku.</p>
         </div>
 
         {/* Right Section */}
