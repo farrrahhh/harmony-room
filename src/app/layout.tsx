@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "HarmonyRoom",
   description: "Feel the rhythm and melody!",
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({
