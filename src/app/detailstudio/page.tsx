@@ -33,7 +33,7 @@ const DetailStudioPage = () => {
 
         <div className="flex-col mt-4 text-black">
             <div className="mt-4  boxStyle p-4">
-                <p>SoulChard Studio is a space designed to cater to the needs of musicians, producers, and music lovers, whether for professional recording, band practice, or music workshops. The studio is equipped with modern equipment, such as digital mixers, high-quality microphones, and premium musical instruments. The room acoustics are professionally tuned to produce clear and immersive sound quality. Additionally, the studio offers a comfortable space with an aesthetic and creative design to inspire its users.</p>
+                <p style={{ textAlign: 'justify' }}>SoulChard Studio is a space designed to cater to the needs of musicians, producers, and music lovers, whether for professional recording, band practice, or music workshops. The studio is equipped with modern equipment, such as digital mixers, high-quality microphones, and premium musical instruments. The room acoustics are professionally tuned to produce clear and immersive sound quality. Additionally, the studio offers a comfortable space with an aesthetic and creative design to inspire its users.</p>
             </div>
             <div className="flex justify-between mt-4 gap-4">
                 <div className="boxStyle p-4 w-full sm:w-1/2">
@@ -114,7 +114,7 @@ const DetailStudioPage = () => {
                     review="The staff at this studio are incredibly knowledgeable, professional, and friendly. They were always available to offer helpful advice and technical assistance, without being intrusive. Their expertise and passion for music truly shine through in their work. They created a relaxed and supportive atmosphere that made the whole recording experience enjoyable and productive. They anticipated our needs before we even voiced them, which is a testament to their experience and dedication."
                     rating={5}
                 />
-                <Review
+                <Review 
                     username="Jane Smith"
                     review="The sound quality in this studio is absolutely pristine. Every instrument, from the crisp highs of the cymbals to the deep resonance of the bass, was captured with incredible clarity. The acoustics of the recording rooms are clearly designed with precision, creating a natural and balanced sound that translates beautifully in the mix. I was particularly impressed with how well the room handled both loud, energetic performances and more delicate, intimate sessions. It's evident that a lot of thought and care has gone into creating an optimal sonic environment."
                     rating={4}
