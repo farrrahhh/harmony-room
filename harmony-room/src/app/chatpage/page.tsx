@@ -34,7 +34,7 @@ const ChatPage = () => {
                 key={chat}
                 onClick={() => handleSelectChat(chat)}
                 className={`p-3 cursor-pointer rounded-lg ${
-                  selectedChat === chat ? "bg-blue-500 text-white" : "hover:bg-gray-200"
+                  selectedChat === chat ? "bg-primary text-white" : "hover:bg-gray-200"
                 } flex items-center`}
               >
                 <img
@@ -64,7 +64,7 @@ const ChatPage = () => {
               {messages.map((msg, index) => (
                 <div key={index} className={`mb-2 ${msg.sender === selectedChat ? "text-right" : ""}`}>
                   <div
-                    className={`p-2 rounded-lg ${msg.sender === selectedChat ? "bg-blue-500 text-white" : "bg-gray-300 text-black"} inline-block`}
+                    className={`p-2 rounded-lg ${msg.sender === selectedChat ? "bg-primary text-white" : "bg-gray-300 text-black"} inline-block`}
                     style={{ maxWidth: "80%" }}
                   >
                     {msg.message}
@@ -83,7 +83,7 @@ const ChatPage = () => {
                 onChange={(e) => setInputMessage(e.target.value)}
               />
               <button
-                className="p-2 bg-blue-500 text-white rounded-r-lg"
+                className="p-2 bg-primary text-white rounded-r-lg"
                 onClick={handleSendMessage}
               >
                 Send
