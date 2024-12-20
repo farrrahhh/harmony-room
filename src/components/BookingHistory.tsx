@@ -76,7 +76,7 @@ function BookingHistory() {
 
             <div className="text-right">
               <h2 className="sb1">Total Price</h2>
-              <h2 className="sb1 text-red">Rp 698.0000</h2>
+              <h2 className="sb1 text-accent2">Rp 698.0000</h2>
               <Link href="/bookingdetails">
                 <p className="text-primary cursor-pointer hover:underline mt-2">
                   See details
@@ -130,7 +130,7 @@ function BookingHistory() {
 
             <div className="text-right">
               <h2 className="sb1">Total Price</h2>
-              <h2 className="sb1 text-red">Rp 898.0000</h2>
+              <h2 className="sb1 text-accent2">Rp 898.0000</h2>
               <Link href="/bookingdetails">
                 <p className="text-primary cursor-pointer hover:underline mt-2">
                   See details

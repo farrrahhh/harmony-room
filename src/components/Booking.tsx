@@ -36,7 +36,7 @@ function Booking() {
           <hr className="w-full h-0.5 my-4 bg-gray-100 border-0 rounded dark:bg-gray-700" />
           <div className="grid grid-cols-2">
             <h2 className="sb1 ">Total Price</h2>
-            <h2 className="sb1 text-right text-red">Rp 698.0000</h2>
+            <h2 className="sb1 text-right text-accent2">Rp 698.0000</h2>
           </div>
           {/* Button Section */}
           <div className="flex flex-col justify-center items-center mt-4">

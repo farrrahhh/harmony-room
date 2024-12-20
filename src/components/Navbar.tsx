@@ -66,7 +66,7 @@ const NavbarLogin = () => {
                 className="h-8 w-8 transition-transform transform hover:scale-110"
               />
             </Link>
-            <Link href="/profile">
+            <Link href="/dashboard">
               <Image
                 src={UserIcon}
                 alt="User"

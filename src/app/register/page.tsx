@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 const LoginPage = () => {
@@ -15,7 +15,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push("/home"); 
+    router.push("/dashboard");
   };
 
   return (
@@ -27,17 +27,15 @@ const LoginPage = () => {
           layout="fill"
           objectFit="cover"
         />
-        
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 text-white text-center px-4">
-            <h2 className="sb1">
-                Find Your <span className="text-primary">Rhythm</span>
-            </h2>
-            <h2 className="sb1">
-                <span className="text-primary">Connect</span> the Beats!
-            </h2>
-        </div>
 
-        
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 text-white text-center px-4">
+          <h2 className="sb1">
+            Find Your <span className="text-primary">Rhythm</span>
+          </h2>
+          <h2 className="sb1">
+            <span className="text-primary">Connect</span> the Beats!
+          </h2>
+        </div>
 
         <div className="absolute inset-0 bg-gradient-to-b from-black to-black opacity-50"></div>
       </div>
@@ -45,28 +43,31 @@ const LoginPage = () => {
         <div className="w-full max-w-md">
           <article className="prose">
             <h2 className="h2 mt-4 mb-2 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
-                <span className="text-dark1">SignUp</span>
-                <span className="text-dark1 font-bold">to</span>
-                <span className="text-primary">HarmonyRoom</span>
+              <span className="text-dark1">SignUp</span>
+              <span className="text-dark1 font-bold">to</span>
+              <span className="text-primary">HarmonyRoom</span>
             </h2>
 
-
             <p className="b1 mb-4">
-            Ready to book your studio and find your perfect bandmate? Let’s jam together! 🎶
+              Ready to book your studio and find your perfect bandmate? Let’s
+              jam together! 🎶
             </p>
           </article>
 
           {/* Form */}
           <form className="mt-4 space-y-3" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="username" className="block text-sm font-medium text-black">
+              <label
+                htmlFor="username"
+                className="block text-sm font-medium text-black"
+              >
                 Username
               </label>
               <input
-                type="text"  
-                name="username"  
+                type="text"
+                name="username"
                 id="username"
-                value={formData.username}  
+                value={formData.username}
                 onChange={handleChange}
                 required
                 className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-black"
@@ -75,7 +76,10 @@ const LoginPage = () => {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-black">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-black"
+              >
                 Password
               </label>
               <input
@@ -91,7 +95,10 @@ const LoginPage = () => {
             </div>
             {/* Input age */}
             <div>
-              <label htmlFor="age" className="block text-sm font-medium text-black">
+              <label
+                htmlFor="age"
+                className="block text-sm font-medium text-black"
+              >
                 Age
               </label>
               <input
@@ -104,7 +111,10 @@ const LoginPage = () => {
             </div>
             {/* City */}
             <div>
-              <label htmlFor="city" className="block text-sm font-medium text-black">
+              <label
+                htmlFor="city"
+                className="block text-sm font-medium text-black"
+              >
                 City
               </label>
               <input
@@ -117,7 +127,10 @@ const LoginPage = () => {
             </div>
             {/* Input Genre drop down */}
             <div>
-              <label htmlFor="genre" className="block text-sm font-medium text-black">
+              <label
+                htmlFor="genre"
+                className="block text-sm font-medium text-black"
+              >
                 Genre
               </label>
               <select
@@ -135,7 +148,10 @@ const LoginPage = () => {
 
             {/* Drop down instrument */}
             <div>
-              <label htmlFor="instrument" className="block text-sm font-medium text-black">
+              <label
+                htmlFor="instrument"
+                className="block text-sm font-medium text-black"
+              >
                 Instrument
               </label>
               <select
@@ -151,7 +167,6 @@ const LoginPage = () => {
               </select>
             </div>
 
-
             <button
               type="submit"
               className="sb1 w-full h-12 bg-primary hover:bg-primary-opacity-5 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:ring-primary"
@@ -162,8 +177,7 @@ const LoginPage = () => {
 
           {/* Footer */}
           <p className="b1 mt-6 text-left text-bold text-dark1">
-            Already have an account?{" "}
-            {/* back to login */}
+            Already have an account? {/* back to login */}
             <Link href="/" className="b1 text-primary hover:text-blue-500">
               Login
             </Link>
