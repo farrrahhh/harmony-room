@@ -5,7 +5,7 @@ import Qr from "@Images/QR.png";
 function Booking() {
   return (
     <div className="bg-white text-dark1 p-6 rounded-lg shadow-md style2">
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-3 mr-8">
         <div className="ml-8">
           <div className="flex">
             <h1 className="h1 text-primary">SoulChord </h1>
@@ -31,12 +31,12 @@ function Booking() {
           <div className="grid grid-cols-2">
             <h2 className="b1">Studio Fees</h2>
 
-            <h2 className="b1 text-right">2 x Rp 349.0000</h2>
+            <h2 className="b1 text-right">2 x Rp 349.000</h2>
           </div>
           <hr className="w-full h-0.5 my-4 bg-gray-100 border-0 rounded dark:bg-gray-700" />
           <div className="grid grid-cols-2">
             <h2 className="sb1 ">Total Price</h2>
-            <h2 className="sb1 text-right text-accent2">Rp 698.0000</h2>
+            <h2 className="sb1 text-right text-accent2">Rp 698.000</h2>
           </div>
           {/* Button Section */}
           <div className="flex flex-col justify-center items-center mt-4">
@@ -59,13 +59,14 @@ function Booking() {
           <h1 className="sb1 text-primary">The QR Code is valid for</h1>
           <h1 className="h1 text-primary">5:00</h1>
         </div>
-        <div className="relative h-full">
+        <div className="relative w-full h-full flex justify-center items-center">
           <Image
             src={Qr}
             alt="Qr Code"
-            layout="fill"
             objectFit="cover"
             className="rounded-lg"
+            width={500}
+            height={500}
           />
         </div>
       </div>

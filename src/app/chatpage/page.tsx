@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const ChatPage = () => {
   const [selectedChat, setSelectedChat] = useState<string | null>(null);
@@ -31,7 +32,7 @@ const ChatPage = () => {
         <div className="p-4">
           <h2 className="sb1">Chats</h2>
           <ul className="space-y-3">
-            {["Alice", "Bob"].map((chat) => (
+            {["Clement", "Bob"].map((chat) => (
               <li
                 key={chat}
                 onClick={() => handleSelectChat(chat)}
@@ -41,10 +42,13 @@ const ChatPage = () => {
                     : "hover:bg-gray-200"
                 } flex items-center`}
               >
-                <img
-                  src={`/${chat.toLowerCase()}.png`} // Asumsi gambar dengan nama chat (alice.png, bob.png)
+                <Image
+                  src={`/${chat.toLowerCase()}.png`} 
                   alt={chat}
                   className="w-8 h-8 rounded-full mr-4"
+                  width={32}
+                  height={32}
+
                 />
                 {chat}
               </li>

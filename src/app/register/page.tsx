@@ -43,9 +43,15 @@ const LoginPage = () => {
         <div className="w-full max-w-md">
           <article className="prose">
             <h2 className="h2 mt-4 mb-2 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2">
-              <span className="text-dark1">SignUp</span>
-              <span className="text-dark1 font-bold">to</span>
-              <span className="text-primary">HarmonyRoom</span>
+              <div className="flex flex-col">
+                <div>
+                  <span className="text-dark1">SignUp</span>
+                  <span className="text-dark1 ml-4 font-bold">to</span>
+                </div>
+                <div>
+                  <span className="text-primary">HarmonyRoom</span>
+                </div>
+              </div>
             </h2>
 
             <p className="b1 mb-4">

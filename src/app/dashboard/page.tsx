@@ -3,6 +3,7 @@ import Image from "next/image";
 import SearchBar from "@/components/SearchBar";
 import Card2 from "@/components/Card2";
 import Carousel from "@/components/Carousel";
+import Link from "next/link";
 
 const DashboardPage = () => {
   return (
@@ -77,36 +78,66 @@ const DashboardPage = () => {
       </h1>
 
       <div className="grid grid-rows-2 grid-cols-3 gap-4 mt-8 p-8">
-        <Card2
-          title="Harmoni Kreatif"
-          image="/studio5.png"
-          address="Jl. Merdeka Utama No. 12, Blok 3C, Bandung Barat"
-        />
-        <Card2
-          title="Melodi Indah"
-          image="/studio6.png"
-          address="Jl. Suka Mulya No. 45, Blok 2B, Bandung Timur"
-        />
-        <Card2
-          title="Suara Emas"
-          image="/studio9.png"
-          address="Jl. Suka Mulya No. 45, Blok 2B, Bandung Timur"
-        />
-        <Card2
-          title="Vibe Kreatif"
-          image="/10.png"
-          address="Jl. Suka Mulya No. 45, Blok 2B, Bandung Timur"
-        />
-        <Card2
-          title="Mall Indah"
-          image="/11.png"
-          address="Jl. Suka Mulya No. 45, Blok 2B, Bandung Timur"
-        />
-        <Card2
-          title="Lily"
-          image="/12.png"
-          address="Jl. Kembang No. 91, Blok 1E, Bandung Kota"
-        />
+        <Link
+          href="bookingdetails"
+          className="transform transition-transform hover:scale-110"
+        >
+          <Card2
+            title="Harmoni Kreatif"
+            image="/studio5.png"
+            address="Jl. Merdeka Utama No. 12, Blok 3C, Bandung Barat"
+          />
+        </Link>
+        <Link
+          href="bookingdetails"
+          className="transform transition-transform hover:scale-110"
+        >
+          <Card2
+            title="Melodi Indah"
+            image="/studio6.png"
+            address="Jl. Suka Mulya No. 45, Blok 2B, Bandung Timur"
+          />
+        </Link>
+        <Link
+          href="bookingdetails"
+          className="transform transition-transform hover:scale-110"
+        >
+          <Card2
+            title="Suara Emas"
+            image="/studio9.png"
+            address="Jl. Suka Mulya No. 45, Blok 2B, Bandung Timur"
+          />
+        </Link>
+        <Link
+          href="bookingdetails"
+          className="transform transition-transform hover:scale-110"
+        >
+          <Card2
+            title="Vibe Kreatif"
+            image="/10.png"
+            address="Jl. Suka Mulya No. 45, Blok 2B, Bandung Timur"
+          />
+        </Link>
+        <Link
+          href="bookingdetails"
+          className="transform transition-transform hover:scale-110"
+        >
+          <Card2
+            title="Mall Indah"
+            image="/11.png"
+            address="Jl. Suka Mulya No. 45, Blok 2B, Bandung Timur"
+          />
+        </Link>
+        <Link
+          href="bookingdetails"
+          className="transform transition-transform hover:scale-110"
+        >
+          <Card2
+            title="Lily"
+            image="/12.png"
+            address="Jl. Kembang No. 91, Blok 1E, Bandung Kota"
+          />
+        </Link>
       </div>
     </div>
   );

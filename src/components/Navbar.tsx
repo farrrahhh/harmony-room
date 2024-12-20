@@ -7,10 +7,16 @@ import Logo from "@Images/logo.png";
 import ChatIcon from "@Images/navbar-icons/chat-icon.png";
 import HistoryIcon from "@Images/navbar-icons/history-icon.png";
 import UserIcon from "@Images/navbar-icons/user-icon.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const NavbarLogin = () => {
   const router = usePathname();
-  if (router === "/") {
+  if (router === "/" || router === "/register") {
     return (
       <nav className="bg-dark1 shadow-md fixed top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center p-2">
@@ -66,13 +72,20 @@ const NavbarLogin = () => {
                 className="h-8 w-8 transition-transform transform hover:scale-110"
               />
             </Link>
-            <Link href="/dashboard">
-              <Image
-                src={UserIcon}
-                alt="User"
-                className="h-8 w-8 transition-transform transform hover:scale-110"
-              />
-            </Link>
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger>
+                <Image
+                  src={UserIcon}
+                  alt="User"
+                  className="h-8 w-8 transition-transform transform hover:scale-110"
+                />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem asChild>
+                  <Link href="./">Sign Out</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </nav>
