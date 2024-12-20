@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({ title, image, address}) => {
 
     return (
         <div>
-            <div className="boxStyle2 onClick={handleClick} p-8">
+            <div className="boxStyle2 p-8" onClick={handleClick}>
                 <p className="sb1 text-center text-primary">{title} <span className='text-white'>Studio</span></p>
                 <div className='styleImage'>
                     <img src={image} alt="Studio Card" />
