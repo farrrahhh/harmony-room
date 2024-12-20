@@ -1,7 +1,7 @@
 "use client";
 import { FaStar, FaRegStar } from "react-icons/fa";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
+
 interface CardProps {
   title: string;
   price: string;
@@ -10,8 +10,6 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ title, price, image, rating }) => {
-  const router = useRouter();
-
   const renderStars = () => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -24,20 +22,11 @@ const Card: React.FC<CardProps> = ({ title, price, image, rating }) => {
     return stars;
   };
 
-  // handle click
-  const handleClick = () => {
-    // navigate to detail page
-    router.push("/detailstudio");
-  };
-
   return (
     <div>
-      <div
-        className="max-w-xs rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer bg-white text-black"
-        onClick={handleClick}
-      >
-        <div>
-          <Image src={image} alt="Studio Card" width={500} height={300} />
+      <div className="max-w-xs rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer bg-white text-black">
+        <div className="flex justify-center">
+          <Image src={image} alt="Studio Card" width={500} height={500} />
         </div>
         <div className="p-2">
           <p className="sb1">{title}</p>
