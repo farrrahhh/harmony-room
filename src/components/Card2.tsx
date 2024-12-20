@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({ title, image, address }) => {
         />
       </div>
       <div className="flex items-center gap-1 mt-4 mb-1">
-        <Image src="/location.png" alt="Location" width={30} height={15} />
+        <Image src="/Location.png" alt="Location" width={30} height={15} />
         <p className="b1">{address}</p>
       </div>
     </div>
