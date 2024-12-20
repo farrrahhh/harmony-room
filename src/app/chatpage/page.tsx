@@ -29,7 +29,7 @@ const ChatPage = () => {
       <div className="w-1/3 border-r border-gray-300 bg-white">
         <div className="mt-12"></div>
         <div className="p-4">
-          <h2 className="font-bold">Chats</h2>
+          <h2 className="sb1">Chats</h2>
           <ul className="space-y-3">
             {["Alice", "Bob"].map((chat) => (
               <li

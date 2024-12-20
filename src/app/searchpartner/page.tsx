@@ -21,7 +21,7 @@ const HasilSearch = () => {
         <div className="w-full md:w-3/4 lg:w-4/5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <Card4
             title="Clement Nathanael Lim"
-            image="/20.png"
+            image="/image.png"
             agepartner={20}
             genre="Pop"
             instrument="Vocal"

@@ -1,6 +1,12 @@
+"use client";
 import React from "react";
-
+import { useRouter } from 'next/navigation';
 const UserProfile: React.FC = () => {
+  const router = useRouter();
+  const handleClick = () => {
+    // navigate to detail page
+    router.push('/chatpage');
+  }
   return (
     <div className="text-black w-full min-h-screen flex flex-col items-center bg-white">
       {/* User Profile */}
@@ -21,7 +27,8 @@ const UserProfile: React.FC = () => {
           <p className="b1">Jakarta – 25 tahun</p>
           <p className="b1">Instrumen: Piano, Gitar</p>
           <p className="b1">Genre musik: Jazz</p>
-          <button className="bg-primary text-white sb2 py-2 px-4 rounded-lg mt-4">Chat me!</button>
+
+          <button className="bg-primary text-white sb2 py-2 px-4 rounded-lg mt-4" onClick={handleClick}>Chat me!</button>
         </div>
 
         {/* Middle Section */}
